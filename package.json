@@ -2,7 +2,12 @@
   "name": "enhance",
 	"displayName": "enhance",
 	"description": "When you need to make your text just a little bit bigger, but CMD + is TOO MUCH WORK",
-	"version": "0.0.1",
+  "version": "0.0.1",
+  "publisher": "allenjprice",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/allenjprice/vscode-enhance.git"
+  },
 	"engines": {
 		"vscode": "^1.52.0"
 	},

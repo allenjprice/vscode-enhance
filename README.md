@@ -28,7 +28,7 @@ This command resets your Editor Font Zoom level to 0 (returning your text to its
 
 ## FAQ
 > Note: nobody has actually asked these questions yet, but here's a few I can think of that people might ask!
-* I peeked at `extensions.js` and it looks like you literally just call `editor.action.fontZoomIn` a bunch. _Really?_
+* I peeked at `extension.js` and it looks like you literally just call `editor.action.fontZoomIn` a bunch. _Really?_
   * Really!
 * I like using Editor Font Zoom but don't want to install a whole extension for this. What else can I do?
   * No problem! Here's a [blog post](https://www.larryhudson.io/blog/2020/02/editor-font-zoom-vs-code/) that explains how to make the `COMMAND =` and `COMMAND -` shortcuts use Editor Font Zoom instead of their default behavior. 
