@@ -35,7 +35,7 @@
           "type": "integer",
           "default": 6,
           "minimum": 1,
-          "description": "Specifies the number of stages to increase the size of your text when you fun the \"OMEGA ENHANCE\"command. This should probably be a few stages bigger than your \"Enhance Level\" setting, but that's up to you!"
+          "description": "Specifies the number of stages to increase the size of your text when you fun the \"OMEGA ENHANCE\" command. This should probably be a few stages bigger than your \"Enhance Level\" setting, but that's up to you!"
         }
       }
     },
