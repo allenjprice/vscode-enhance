@@ -3,7 +3,7 @@
 **tl;dr** - quickly zoom in on editor's text _without_ zooming in everything else
 
 ## The Problem
-When it comes to editor settings, everybody has their own unique preferences. This is great. Most text editors allow you to customize them to match your own preferences. This is also great!
+When it comes to editor settings, everybody has their own unique preferences - this is great! Most text editors allow you to customize them to match your own preferences - this is also great!
 
 One of _my_ personal preferences involves keeping my font size small. I can't explain why - it's just how I like things! When I'm presenting to a group, teaching a class, or pairing with a coworker, however, my preference gets in the way - other folks may not be able to clearly read the code on-screen. `CMD =` doesn't really suit my needs because it enlarges EVERYTHING - the sidebar, the tab bar, etc. I just want to zoom in on the text!
 
@@ -14,21 +14,16 @@ This extension creates a few convenience commands that leverage the built-in Edi
 
 ## Features
 
-### Command: `ENHANCE!`
+### Commands: `ENHANCE!` and `OMEGA ENHANCE`
 
-This command increases your Editor Font Zoom level by three stages.
+These commands increase your Editor Font Zoom by some number of levels, or 20% increments.
 
-### Command: `OMEGA ENHANCE`
-
-This command increases your Editor Font Zoom level by five stages.
+By default, `ENHANCE!` increases your Editor Font Zoom by three levels; `OMEGA ENHANCE` increases by 6 levels. You can customize these levels in the Settings UI or by setting the `enhance.enhanceLevel` and `enhance.omegaEnhanceLevel` keys in your `settings.json`.
 
 ### Command: `Unenhance`
 
-This command resets your Editor Font Zoom level to 0 (returning your text to its default size).
+This command resets your Editor Font Zoom level to 0 (returning your text to its default size). It's an alias for the built-in "Editor Font Reset" commmand.
 
-## FAQ
-> Note: nobody has actually asked these questions yet, but here's a few I can think of that people might ask!
-* I peeked at `extension.js` and it looks like you literally just call `editor.action.fontZoomIn` a bunch. _Really?_
-  * Really!
-* I like using Editor Font Zoom but don't want to install a whole extension for this. What else can I do?
-  * No problem! Here's a [blog post](https://www.larryhudson.io/blog/2020/02/editor-font-zoom-vs-code/) that explains how to make the `COMMAND =` and `COMMAND -` shortcuts use Editor Font Zoom instead of their default behavior. 
+## Another possibility
+
+This extension solves a very specific problem according to my personal tastes. If you like the idea of using Editor Font Zoom but don't want to install an entire extension with silly command names, here's a [blog post](https://www.larryhudson.io/blog/2020/02/editor-font-zoom-vs-code/) that explains how to make the `COMMAND =` and `COMMAND -` shortcuts use Editor Font Zoom instead of their default behavior. 
