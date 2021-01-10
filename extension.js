@@ -1,22 +1,26 @@
 const vscode = require("vscode");
+function enhanceToLevel(level) {
+  for (let i = 0; i < level; i++) {
+    vscode.commands.executeCommand("editor.action.fontZoomIn");
+  }
+}
+
 /**
  * @param {vscode.ExtensionContext} context
  */
 function activate(context) {
   let enhance = vscode.commands.registerCommand("enhance.enhance", function () {
-    vscode.commands.executeCommand("editor.action.fontZoomIn");
-    vscode.commands.executeCommand("editor.action.fontZoomIn");
-    vscode.commands.executeCommand("editor.action.fontZoomIn");
+    const { enhanceLevel } = vscode.workspace.getConfiguration("enhance");
+    enhanceToLevel(enhanceLevel);
   });
 
   let omegaEnhance = vscode.commands.registerCommand(
     "enhance.omega-enhance",
     function () {
-      vscode.commands.executeCommand("editor.action.fontZoomIn");
-      vscode.commands.executeCommand("editor.action.fontZoomIn");
-      vscode.commands.executeCommand("editor.action.fontZoomIn");
-      vscode.commands.executeCommand("editor.action.fontZoomIn");
-      vscode.commands.executeCommand("editor.action.fontZoomIn");
+      const { omegaEnhanceLevel } = vscode.workspace.getConfiguration(
+        "enhance"
+      );
+      enhanceToLevel(omegaEnhanceLevel);
     }
   );
 

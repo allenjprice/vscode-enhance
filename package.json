@@ -1,61 +1,73 @@
 {
   "name": "enhance",
-	"displayName": "enhance",
-	"description": "When you need to make your text just a little bit bigger, but CMD + is TOO MUCH WORK",
+  "displayName": "enhance",
+  "description": "When you need to make your text just a little bit bigger, but CMD + is TOO MUCH WORK",
   "version": "0.0.1",
   "publisher": "allenjprice",
   "repository": {
     "type": "git",
     "url": "https://github.com/allenjprice/vscode-enhance.git"
   },
-	"engines": {
-		"vscode": "^1.52.0"
-	},
-	"categories": [
-		"Other"
-	],
-	"activationEvents": [
-        "onCommand:enhance.sayWassup",
-        "onCommand:enhance.enhance",
-        "onCommand:enhance.unenhance",
-        "onCommand:enhance.omega-enhance"
-	],
-	"main": "./extension.js",
-	"contributes": {
-		"commands": [
-    {
-      "command": "enhance.sayWassup",
-      "title": "Hello World"
+  "engines": {
+    "vscode": "^1.52.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:enhance.sayWassup",
+    "onCommand:enhance.enhance",
+    "onCommand:enhance.unenhance",
+    "onCommand:enhance.omega-enhance"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "configuration": {
+      "title": "Enhance",
+      "properties": {
+        "enhance.enhanceLevel": {
+          "type": "integer",
+          "default": 3,
+          "minimum": 1,
+          "description": "Specifies the number of stages to increase the size of your text when you run the \"ENHANCE!\" command."
+        },
+        "enhance.omegaEnhanceLevel": {
+          "type": "integer",
+          "default": 6,
+          "minimum": 1,
+          "description": "Specifies the number of stages to increase the size of your text when you fun the \"OMEGA ENHANCE\"command. This should probably be a few stages bigger than your \"Enhance Level\" setting, but that's up to you!"
+        }
+      }
     },
-    {
-      "command": "enhance.enhance",
-      "title": "Enhance: ENHANCE!"
-    },
-    {
-      "command": "enhance.omega-enhance",
-      "title": "Enhance: OMEGA ENHANCE"
-    },
-    {
-      "command": "enhance.unenhance",
-      "title": "Enhance: Unenhance"
-    }
-  ]
-	},
-	"scripts": {
-		"lint": "eslint .",
-		"pretest": "yarn run lint",
-		"test": "node ./test/runTest.js"
-	},
-	"devDependencies": {
-        "@types/vscode": "^1.52.0",
-        "@types/glob": "^7.1.3",
-        "@types/mocha": "^8.0.4",
-        "@types/node": "^12.11.7",
-        "eslint": "^7.15.0",
-        "glob": "^7.1.6",
-        "mocha": "^8.1.3",
-        "typescript": "^4.1.2",
-        "vscode-test": "^1.4.1"
-    }
-
+    "commands": [
+      {
+        "command": "enhance.enhance",
+        "title": "ENHANCE!"
+      },
+      {
+        "command": "enhance.omega-enhance",
+        "title": "OMEGA ENHANCE"
+      },
+      {
+        "command": "enhance.unenhance",
+        "title": "Unenhance"
+      }
+    ]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "yarn run lint",
+    "test": "node ./test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.52.0",
+    "@types/glob": "^7.1.3",
+    "@types/mocha": "^8.0.4",
+    "@types/node": "^12.11.7",
+    "eslint": "^7.15.0",
+    "glob": "^7.1.6",
+    "mocha": "^8.1.3",
+    "typescript": "^4.1.2",
+    "vscode-test": "^1.4.1"
+  }
 }
